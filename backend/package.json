@@ -6,7 +6,9 @@
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "mysql": "^2.18.1",
-    "mysql2": "^3.14.0"
+    "mysql2": "^3.14.0",
+    "react": "^19.1.0",
+    "router": "^2.2.0"
   },
   "name": "backend",
   "version": "1.0.0",
