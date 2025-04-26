@@ -1,0 +1,172 @@
+/* Form grid for side‑by‑side fields */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* Label + input grouping */
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* Button row for edit/delete etc */
+.button-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+/* —— Accent variables —— */
+:root {
+  --primary: #0077cc;
+  --primary-dark: #005fa3;
+  --bg-page: #f2f6f9;
+  --bg-card: #ffffff;
+  --text: #333333;
+  --text-light: #666666;
+  --gap: 16px;
+  --radius: 8px;
+}
+
+/* —— Page background & base typography —— */
+body {
+  background-color: var(--bg-page);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* —— Container centering —— */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 var(--gap);
+}
+
+/* —— Headings —— */
+h1 {
+  font-size: 2rem;
+  margin-bottom: var(--gap);
+}
+
+h2, .card h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--gap);
+  color: var(--primary);
+}
+
+/* —— Navigation (if you have one) —— */
+nav a {
+  color: var(--primary);
+  font-weight: 600;
+  margin: 0 calc(var(--gap) / 2);
+  text-decoration: none;
+}
+nav a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* —— Cards —— */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: var(--gap);
+  margin-bottom: var(--gap * 1.5);
+  transition: transform 0.15s;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* —— Form grid —— */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--gap);
+  margin-bottom: var(--gap);
+}
+
+/* —— Form group —— */
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-light);
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* —— Buttons —— */
+button {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* —— “Link” style button (for toggles) —— */
+.link-btn {
+  background: none;
+  color: var(--primary);
+  text-decoration: underline;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+.link-btn:hover {
+  color: var(--primary-dark);
+}
+
+/* —— List items —— */
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+.card li {
+  padding: var(--gap);
+  border-bottom: 1px solid #eee;
+}
+.card li:last-child {
+  border-bottom: none;
+}
+
+.button-row {
+  display: flex;
+  gap: var(--gap);
+  margin-top: var(--gap / 2);
+}
+
+small {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
